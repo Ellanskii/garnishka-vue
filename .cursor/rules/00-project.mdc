@@ -1,0 +1,26 @@
+---
+description: Общие правила проекта garnishka-vue (стек, зависимости, Definition of Done)
+alwaysApply: true
+---
+
+# Проект
+
+Vue 3 + TypeScript (strict) + Vite SPA — витрина садовых растений. Контекст: Garshinka (Nuxt 3 / Vue 3 / Pinia / SCSS), поэтому код должен легко переноситься в Nuxt 3.
+
+Стек: Vue Router, Pinia (setup stores), VueUse, Tailwind CSS v4, Vitest + @vue/test-utils + jsdom, ESLint flat + Prettier, pnpm.
+
+- **Не добавляй новые зависимости без явного согласия пользователя.** Сначала предложи пакет и объясни зачем.
+- Не трогай несвязанные файлы и конфиги.
+- Работай маленькими шагами: короткий план → изменения → проверка.
+
+## Definition of Done
+
+Перед ответом «готово» обязательно запусти и добейся зелёного результата:
+
+```bash
+pnpm lint && pnpm typecheck && pnpm test --run && pnpm build
+```
+
+Не отключай правила линтера и не ослабляй tsconfig, чтобы пройти проверки.
+
+Подробности — в `AGENTS.md`.

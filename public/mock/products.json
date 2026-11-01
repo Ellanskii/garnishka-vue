@@ -1,0 +1,63 @@
+[
+  {
+    "id": "rose-ascot",
+    "name": "Роза чайно-гибридная «Аскот»",
+    "latinName": "Rosa 'Ascot'",
+    "category": "roses",
+    "price": 890,
+    "oldPrice": 1090,
+    "stock": 24,
+    "hardinessZone": "5",
+    "potVolumeL": 3,
+    "image": "https://picsum.photos/seed/rose/600/400",
+    "description": "Густомахровые цветки насыщенного малинового цвета с сильным ароматом. Цветёт волнами с июня до заморозков."
+  },
+  {
+    "id": "thuja-smaragd",
+    "name": "Туя западная «Смарагд»",
+    "latinName": "Thuja occidentalis 'Smaragd'",
+    "category": "conifers",
+    "price": 1490,
+    "stock": 8,
+    "hardinessZone": "4",
+    "potVolumeL": 5,
+    "image": "https://picsum.photos/seed/thuja/600/400",
+    "description": "Узкоконическая туя для живых изгородей. Сохраняет изумрудный цвет хвои зимой."
+  },
+  {
+    "id": "hosta-june",
+    "name": "Хоста «Джун»",
+    "latinName": "Hosta 'June'",
+    "category": "perennials",
+    "price": 450,
+    "stock": 0,
+    "hardinessZone": "3",
+    "potVolumeL": 2,
+    "image": "https://picsum.photos/seed/hosta/600/400",
+    "description": "Теневыносливый многолетник с сине-зелёными листьями и золотистым центром."
+  },
+  {
+    "id": "apple-antonovka",
+    "name": "Яблоня «Антоновка обыкновенная»",
+    "latinName": "Malus domestica 'Antonovka'",
+    "category": "fruit-trees",
+    "price": 1290,
+    "stock": 12,
+    "hardinessZone": "3",
+    "potVolumeL": 10,
+    "image": "https://picsum.photos/seed/apple/600/400",
+    "description": "Классический зимостойкий осенний сорт с ароматными кисло-сладкими плодами."
+  },
+  {
+    "id": "hydrangea-limelight",
+    "name": "Гортензия метельчатая «Лаймлайт»",
+    "latinName": "Hydrangea paniculata 'Limelight'",
+    "category": "shrubs",
+    "price": 990,
+    "stock": 3,
+    "hardinessZone": "4",
+    "potVolumeL": 3,
+    "image": "https://picsum.photos/seed/hydrangea/600/400",
+    "description": "Крупные лаймово-зелёные соцветия, к осени розовеющие. Неприхотлива и зимостойка."
+  }
+]

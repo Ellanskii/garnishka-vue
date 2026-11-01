@@ -1,0 +1,15 @@
+---
+description: Правила тестирования (Vitest + @vue/test-utils)
+globs: src/**/*.test.ts
+alwaysApply: false
+---
+
+# Тесты
+
+- Тест лежит рядом с кодом: `foo.ts` → `foo.test.ts`.
+- Любая логика (stores, composables, utils, api) — покрыта тестами. Для компонентов — ключевое поведение (эмиты, disabled-состояния, ветки loading/error/empty).
+- Pinia: `setActivePinia(createPinia())` в `beforeEach`.
+- Сеть: мокай `productsApi`/`fetch` через `vi.spyOn` / `vi.stubGlobal`, не ходи в реальную сеть.
+- Роутер в компонентах: `RouterLinkStub` из `@vue/test-utils`.
+- Тестируй поведение, а не детали реализации. Одна проверка смысла на `it`.
+- Запуск: `pnpm test --run`.

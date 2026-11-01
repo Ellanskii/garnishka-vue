@@ -1,0 +1,29 @@
+---
+description: TypeScript, API-слой, Pinia и composables
+globs: src/**/*.ts
+alwaysApply: false
+---
+
+# TypeScript и данные
+
+- TS strict + `noUncheckedIndexedAccess`: обрабатывай `undefined` у элементов массивов/словарей.
+- Никаких `any`; для неизвестных данных — `unknown` + сужение типа. `import type` для типов.
+- Доменные типы — в `src/types`.
+
+## API
+
+- Все запросы — через `http<T>()` из `src/api/http.ts`; эндпоинты оборачивай в модули `src/api/<entity>.ts`.
+- Ошибки — `HttpError`; текст для UI — `getErrorMessage(error)`.
+- Поддерживай `AbortSignal` для отмены запросов.
+- Мок-данные лежат в `public/mock/*.json`.
+
+## Pinia
+
+- Только setup stores: `defineStore('name', () => { ... return {...} })`.
+- В store: state (`ref`), getters (`computed`), actions (функции). Для async — `loading`/`error` флаги.
+- Персистентность — через `useLocalStorage` из VueUse (без новых плагинов).
+
+## Composables
+
+- Файлы `src/composables/useXxx.ts`, возвращают объект из ref/computed/функций.
+- Прежде чем писать свой — проверь, нет ли готового в VueUse.

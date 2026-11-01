@@ -1,0 +1,24 @@
+---
+description: Правила для Vue-компонентов и страниц
+globs: src/**/*.vue
+alwaysApply: false
+---
+
+# Vue-компоненты
+
+- Только `<script setup lang="ts">` + Composition API. Options API запрещён.
+- Порядок блоков: `<script setup>` → `<template>` → (опционально) `<style>`.
+- `defineProps<{...}>()`, `defineEmits<{ event: [payload: T] }>()`, `withDefaults` для значений по умолчанию. Никаких `any`.
+- Компоненты маленькие (ориентир до ~150 строк). Логика — в composables/stores, в компоненте — только связывание.
+- Имена компонентов — PascalCase, из нескольких слов (`ProductCard`, `HomeView`).
+- **Async UI обязан иметь 3 состояния**: loading (`BaseSpinner`), error (`ErrorState` с кнопкой «Повторить»), empty (`EmptyState`).
+- Стили — Tailwind-классы, токены цвета `leaf-*` из `src/style.css`.
+
+## Доступность (a11y)
+
+- Семантика: `button` для действий, `RouterLink`/`a` для навигации, списки — `ul/li`, характеристики — `dl/dt/dd`.
+- У `<button>` всегда `type="button"` (если не submit).
+- `alt` у изображений, `aria-label` у иконок-кнопок.
+- Видимый фокус: `focus-visible:outline-*`.
+- Динамические статусы: `role="status"` / `aria-live="polite"`, ошибки — `role="alert"`.
+- Формы: `label` связан с `input` (`for`/`id`), ошибки валидации связаны через `aria-describedby`.

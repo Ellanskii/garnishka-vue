@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-leaf-50: #f1f8f1;
+  --color-leaf-100: #dcefdc;
+  --color-leaf-500: #3f8f46;
+  --color-leaf-600: #2f7537;
+  --color-leaf-700: #255c2c;
+}
+
+html {
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
